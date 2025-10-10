@@ -1,0 +1,39 @@
+{
+  "name": "medical-scraper",
+  "version": "1.0.0",
+  "description": "Medical information scraper for 7대암",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/crawler.js",
+    "dev": "ts-node src/crawler.ts",
+    "crawler": "ts-node src/crawler.ts",
+    "convert": "ts-node src/converter.ts"
+  },
+  "keywords": [
+    "scraper",
+    "medical",
+    "cancer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "cheerio": "^1.0.0-rc.12",
+    "turndown": "^7.1.2",
+    "zod": "^3.22.4",
+    "p-limit": "^5.0.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/turndown": "^5.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
