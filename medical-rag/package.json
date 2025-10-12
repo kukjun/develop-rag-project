@@ -1,0 +1,33 @@
+{
+  "name": "medical-rag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsx",
+    "insert": "tsx src/search-rag.ts",
+    "insert:dev": "tsx src/search-rag.ts",
+    "search": "tsx src/search-rag.ts",
+    "search:dev": "tsx src/search-rag.ts"
+  },
+  "author": "lxx3380@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.57",
+    "@langchain/langgraph": "^0.4.9",
+    "@langchain/openai": "^0.6.14",
+    "@langchain/textsplitters": "^0.1.0",
+    "gray-matter": "^4.0.3",
+    "langchain": "^0.3.35",
+    "pg": "^8.11.3",
+    "winston": "^3.11.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.3.3"
+  }
+}
