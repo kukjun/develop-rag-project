@@ -1,0 +1,10 @@
+[project]
+name = "rag-fe"
+version = "0.1.0"
+description = "Medical RAG Frontend with Streamlit"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.32.0",
+    "requests>=2.31.0",
+]
