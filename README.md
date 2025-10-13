@@ -1,3 +1,95 @@
+# Medical RAG Project
+
+의료 정보 RAG (Retrieval-Augmented Generation) 시스템
+
+## 빠른 시작 (Quick Start)
+
+### 프로젝트 구조
+
+```
+develop-rag-project/
+├── medical-rag/          # 원본 RAG 스크립트
+├── rag-be/              # Backend API (Express + TypeScript)
+└── rag-fe/              # Frontend UI (Streamlit)
+```
+
+### 1. Backend 실행
+
+```bash
+cd rag-be
+npm install
+npm run dev
+```
+
+Backend 서버가 http://localhost:3001 에서 실행됩니다.
+
+### 2. Frontend 실행
+
+새 터미널을 열고:
+
+```bash
+cd rag-fe
+uv sync
+uv run streamlit run app.py
+```
+
+Frontend가 http://localhost:8501 에서 실행됩니다.
+
+### 3. 사용하기
+
+1. 브라우저에서 http://localhost:8501 접속
+2. 사이드바에서 모드 선택:
+   - **Default Mode**: 직접 벡터 검색 방식
+   - **AI Agent Mode**: Tool을 사용하는 방식
+3. 질문 입력 (예: "당뇨병의 증상은 무엇인가요?")
+4. 실시간 스트리밍으로 답변 확인
+
+## 기능
+
+### Default Mode
+- PGVector에서 유사 문서 직접 검색
+- 검색된 문서를 컨텍스트로 LLM에 전달
+- 의료 관련 질문만 답변
+
+### AI Agent Mode
+- LLM이 Tool을 자동으로 사용
+- 필요시 retrieve_medical_info 도구로 문서 검색
+- 의료 관련 질문 외에도 일반 질문 답변 가능
+
+## 기술 스택
+
+### Backend
+- Express.js + TypeScript
+- LangChain (OpenAI, PGVector)
+- Server-Sent Events (SSE) for streaming
+
+### Frontend
+- Streamlit
+- Real-time streaming response
+- Chat history management
+
+## 환경 변수
+
+`rag-be/.env` 파일:
+```env
+OPENAI_API_KEY=your_openai_api_key
+PGVECTOR_HOST=localhost
+PGVECTOR_PORT=5433
+PGVECTOR_USER=postgres
+PGVECTOR_PASSWORD=password
+PGVECTOR_DATABASE=medical_rag
+PORT=3001
+```
+
+## 요구사항
+
+- Node.js 18+
+- Python 3.8+
+- PostgreSQL with PGVector extension
+- OpenAI API Key
+
+---
+
 # 질병 정보 RAG 시스템 구축 계획
 
 ## 프로젝트 개요
