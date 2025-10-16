@@ -9,7 +9,9 @@
     "insert": "tsx src/search-rag.ts",
     "insert:dev": "tsx src/search-rag.ts",
     "search": "tsx src/search-rag.ts",
-    "search:dev": "tsx src/search-rag.ts"
+    "search:dev": "tsx src/search-rag.ts",
+    "search-agent": "tsx src/search-rag-aiagent.ts",
+    "search-agent:dev": "tsx src/search-rag-aiagent.ts"
   },
   "author": "lxx3380@gmail.com",
   "license": "ISC",

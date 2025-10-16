@@ -3,7 +3,7 @@ import { OpenAIEmbeddings } from "@langchain/openai";
 import { ChatOpenAI } from "@langchain/openai";
 import { PGVectorStore } from "@langchain/community/vectorstores/pgvector";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
-import { logger } from "./utils/logger";
+import { logger } from "../src/utils/logger";
 import { z } from "zod";
 import { tool } from "@langchain/core/tools";
 
@@ -208,7 +208,7 @@ async function main() {
     logger.info("=".repeat(60));
 
     // 테스트 쿼리
-    const query = "김치찌개 잘 끓이는 법";
+    const query = "20대에 대장암이 걸렸어 나 어떻게 해야해?";
 
     logger.info(`\n❓ Query: ${query}\n`);
 
